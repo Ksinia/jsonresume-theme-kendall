@@ -46,7 +46,7 @@
           {{#workBool}}
           <!-- WORK EXPERIENCE -->
           <div class="box">
-            <h2><i class= "fa fa-suitcase ico"></i> Experience</h2>
+            <h2><i class= "fas fa-suitcase ico"></i> Work Experience</h2>
             {{#work}}
               <div class="job clearfix">
                 <div class="row">
@@ -220,7 +220,7 @@
           {{#publicationsBool}}
           <!-- PUBLICATIONS -->
           <div class="box">
-            <h2><i class="fa fa-book ico"></i> Publications</h2>
+            <h2><i class="fas fa-book ico"></i> Publications</h2>
             {{#publications}}
             <div class="publication panel panel-default">
               <div class="panel-heading">
@@ -246,21 +246,27 @@
           {{/publicationsBool}}
           {{#educationBool}}
           <!-- EDUCATION -->
-          <div class="box avoid-break">
-            <h2><i class="fa fa-university ico"></i> Education</h2>
+          <div class="box">
+            <h2><i class="fas fa-university ico"></i> Education</h2>
             <ul id="education" class="clearfix">
               {{#education}}
               <li>
                 <div class="year pull-left">{{startDateYear}} {{endDateYear}}</div>
                 <div class="description pull-right">
                   <h3>{{institution}}</h3>
-                  {{#studyType}}<p><i class= "fa fa-graduation-cap ico"></i> {{studyType}}</p>{{/studyType}}
+                  <div class="where">{{organization}}</div>
+                  {{#url}}
+                  <div class="address">
+                    <a href="{{url}}" target= "_blank"><i class="fas fa-globe ico"></i> {{url}}</a>
+                  </div>
+                  {{/url}}
+                  {{#studyType}}<p><i class= "fas fa-graduation-cap ico"></i> {{studyType}}</p>{{/studyType}}
                   <p>{{area}}</p>
-                  {{#gpa}}
+                  {{#score}}
                   <p>
-                    GPA: {{gpa}}
+                    Grade: {{score}}
                   </p>
-                  {{/gpa}}
+                  {{/score}}
                   {{#educationCourses}}
                     <div>Courses</div>
                     <ul class="list-group">
